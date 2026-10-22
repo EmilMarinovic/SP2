@@ -1,4 +1,4 @@
-abstract class NetTitle extends Title{
+abstract class NetTitle extends Title {
     private int availability;
     private int reach;
     private int use;
