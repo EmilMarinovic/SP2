@@ -7,7 +7,6 @@ abstract class Title {
         this.title = title;
         this.literatureType = literatureType;
         this.rate = 0.067574;
-
     }
 
     public double calculateRoyalty() {

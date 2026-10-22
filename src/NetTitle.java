@@ -1,7 +1,7 @@
 abstract class NetTitle extends Title{
-    protected int availability; //Ændret til protected for at få adgang i EBook & EAudioBook
-    protected int reach; //Ændret til protected for at få adgang i EBook & EAudioBook
-    protected int use; //Ændret til protected for at få adgang i EBook & EAudioBook
+    private int availability;
+    private int reach;
+    private int use;
 
     public NetTitle(String title, String literatureType, int availability, int reach, int use) {
         super(title, literatureType);
@@ -10,11 +10,11 @@ abstract class NetTitle extends Title{
         this.use = use;
     }
 
-    protected double getPseudoCopies() {
-        return 0;
+    public double getPseudoCopies() {
+        return (reach * 5) + (availability * 0.5) + getUseFactor();
     }
 
     private int getUseFactor() {
-        return 0;
+        return use;
     }
 }
